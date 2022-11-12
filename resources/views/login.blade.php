@@ -4,17 +4,28 @@
 @section("contenu")
   <div class="row justify-content-center align-items-center">
     <div class="col-lg-4 login">
-      <form>
+      <form method="post" action="/connexion">
+        @csrf
         <div class="row mb-3">
           <label class="col-form-label col-lg-4 text-start fw-bold">Login :</label>
           <div class="col-lg-8">
-            <input class="form-control" name="login">
+            <input class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}">
+            @error('login')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
           </div>
         </div>
         <div class="row mb-3">
           <label class="col-form-label col-lg-4 text-start fw-bold">Password :</label>
           <div class="col-lg-8">
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+            @error('password')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
           </div>
         </div>
         <div class="row">
