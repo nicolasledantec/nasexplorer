@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
 
     <script src="/js/bootstrap.bundle.min.js"></script>
   </head>
