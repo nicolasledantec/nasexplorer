@@ -17,9 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(UserController::class)->group(function () {
   Route::get("/", "accueil")->middleware("auth");
+  Route::get("/compte", "vueCompte")->middleware("auth");
+  Route::post("/compte/password", "changePassword")->middleware("auth");
 });
 
 Route::controller(AuthController::class)->group(function () {
   Route::get("/connexion", "vueConnexion")->name("login");
   Route::post("/connexion", "connexion");
+  Route::get("/deconnexion", "deconnexion");
 });

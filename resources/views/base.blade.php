@@ -7,7 +7,6 @@
     <title>NasExplorer  - @yield('titre')</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
 

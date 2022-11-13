@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 /**
  * Classe contenant les actions d'authentification
@@ -43,5 +44,18 @@ class AuthController extends Controller
     return back()->withErrors([
       'login' => 'Erreur sur le login ou le mot de passe saisi',
     ])->onlyInput('login');
+  }
+
+  /**
+   * Déconnecte l'utilisateur
+   *
+   * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+   */
+  public function deconnexion() {
+    Session::flush();
+
+    Auth::logout();
+
+    return redirect('/');
   }
 }
