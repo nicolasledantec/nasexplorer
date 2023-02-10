@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
 
     <script src="/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/axios.min.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
   </head>
   <body>
+    <div id="appMessage" class="appMessage"></div>
     <div class="container-fluid">
       @yield("contenu")
     </div>

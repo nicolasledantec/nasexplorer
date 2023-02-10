@@ -5,3 +5,11 @@
   border-radius: 5px;
   padding: 10px;
 }
+/* Structure */
+.appMessage {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: none;
+  z-index: 99999;
+}
